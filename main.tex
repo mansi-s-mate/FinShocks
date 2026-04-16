@@ -1,0 +1,179 @@
+\documentclass[10pt]{beamer}
+
+%% Based on the original theme by Matthias Vogelgesang
+%% Merged template: ie.tex color palette + IAAE.tex presentation roadmap
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{lmodern}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Theme Adjustments     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{CanvasBG}{HTML}{FAFAFA}
+
+% Color palette (from ie.tex)
+\definecolor{UnccGreen}{HTML}{005035}
+\definecolor{UnccLightGreen}{HTML}{C3D7A4}
+\definecolor{UnccGold}{HTML}{A49665}
+\definecolor{UnccOrange}{HTML}{F3901D}
+\definecolor{UnccLightYellow}{HTML}{899064}
+\definecolor{UnccBlue}{HTML}{007377}
+\definecolor{UnccPink}{HTML}{DE3A6E}
+\definecolor{White}{HTML}{FFFFFF}
+\definecolor{LightGray}{HTML}{F1E6B2}
+
+\setbeamercolor{frametitle}{bg=UnccGreen}
+\setbeamercolor{progress bar}{bg=UnccGold, fg=UnccGreen}
+\setbeamercolor{alerted text}{fg=UnccOrange}
+
+\setbeamercolor{block title}{bg=UnccGreen, fg=White}
+\setbeamercolor{block title example}{bg=UnccBlue, fg=White}
+\setbeamercolor{block title alerted}{bg=UnccPink, fg=White}
+\setbeamercolor{block body}{bg=LightGray}
+
+\metroset{titleformat=smallcaps, progressbar=foot}
+
+\makeatletter
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\setlength{\metropolis@titleseparator@linewidth}{2pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Presentation Title}
+%\subtitle{Optional subtitle}
+\date{\today}
+\author{Mansi Mate}
+\institute{Bank of England \\[1ex]
+\textit{Disclaimer: The views expressed are those of the authors and do not necessarily reflect the views of the Bank of England or its Committees.}}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\begin{document}
+
+\maketitle
+
+%-----------------------------
+%%---- MOTIVATION ----------
+%-----------------------------
+\begin{frame}{Motivation}
+    \begin{itemize}
+        \item First motivating point -- headline result or quote.
+        \item Second motivating point -- why the question matters now.
+        \item \textbf{Bold emphasis} for the key takeaway.
+        \item \textcolor{red}{Red text} for especially important claims.
+    \end{itemize}
+\end{frame}
+
+%-----------------------------
+%%---- ROADMAP (from IAAE.tex) -----
+%-----------------------------
+\begin{frame}{Presentation Roadmap}
+\begin{enumerate}
+    \item \textbf{Section One}
+    \vspace{0.4em}
+    \item \textbf{Section Two}
+    \begin{itemize}
+        \item Sub-point A
+        \item Sub-point B
+    \end{itemize}
+    \vspace{0.4em}
+    \item \textbf{Section Three}
+    \begin{itemize}
+        \item Sub-point C
+    \end{itemize}
+    \vspace{0.4em}
+    \item \textbf{Section Four}
+    \vspace{0.4em}
+    \item \textbf{Conclusion}
+\end{enumerate}
+\end{frame}
+
+
+%-----------------------------------------------
+\section{Section One}
+%-----------------------------------------------
+
+\begin{frame}{Content Slide -- Itemize}
+\begin{itemize}
+    \item Point one.
+    \item Point two with \textbf{bold} and \textit{italic}.
+    \item Point three with a citation {\scriptsize\textcolor{gray}{(Author, Year)}}.
+\end{itemize}
+
+\pause
+\vspace{0.5em}
+\textcolor{blue}{$\boldsymbol{\Rightarrow}$} Main takeaway from this slide.
+\end{frame}
+
+
+%-----------------------------------------------
+\section{Section Two}
+%-----------------------------------------------
+
+\begin{frame}{Two-Column Layout with Figure}
+\begin{minipage}{0.48\linewidth}
+    \centering
+    % \includegraphics[width=\linewidth]{figure.png}
+    \fbox{\parbox[c][3cm][c]{0.95\linewidth}{\centering \textit{figure placeholder}}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+    \begin{itemize}
+        \item Description of the figure.
+        \item Key pattern to highlight.
+    \end{itemize}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}{Equation Slide}
+\textbf{Model:}
+\begin{equation}
+y_t = \underbrace{\tau_t}_{\text{trend}} + \underbrace{\varepsilon_t}_{\text{transitory}}
+\end{equation}
+\begin{itemize}
+    \item Interpretation of the equation.
+\end{itemize}
+\end{frame}
+
+
+%-----------------------------------------------
+\section{Conclusion}
+%-----------------------------------------------
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+    \item Main finding one.
+    \item Main finding two.
+    \item Policy / practical implication.
+\end{itemize}
+\end{frame}
+
+% \begin{frame}
+% \centering
+% \Huge Thank you!
+% \end{frame}
+
+
+%------------------------------------------------
+% APPENDIX / EXTRAS
+%-----------------------------------------------
+\appendix
+
+\begin{frame}{Appendix slide}
+    Additional material goes here.
+\end{frame}
+
+\end{document}
